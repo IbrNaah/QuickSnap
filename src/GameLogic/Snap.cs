@@ -87,12 +87,12 @@ namespace CardGames.GameLogic
 		/// </summary>
 		public void Start()
 		{
-			if ( ! IsStarted )			// only start if not already started!
+			if ( ! IsStarted )			
 			{
 				_started = true;
-				_deck.Shuffle ();		// Return the cards and shuffle
+				_deck.Shuffle ();		
 
-				FlipNextCard ();		// Flip the first card...
+				FlipNextCard ();		
 				_gameTimer.Start();
 			}
 		}
@@ -116,8 +116,8 @@ namespace CardGames.GameLogic
 			//TODO: implement update to automatically slip cards!
 			if (_gameTimer.Ticks > _flipTime)
 			{
-				_gameTimer.Reset ();
-				FlipNextCard ();
+				_gameTimer.Reset(); 
+				FlipNextCard();
 			}
 		}
 
@@ -155,7 +155,7 @@ namespace CardGames.GameLogic
 
 			// stop the game...
 			_started = false;
-			_gameTimer.Stop ();
+			_gameTimer.Stop();
 		}
 	
 		#region Snap Game Unit Tests
